@@ -17,24 +17,6 @@ import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 
 public class DemoApplication {
 	
-	@Bean
-	
-	public WebMvcConfigurer corsConfigure() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**")
-						.allowedOrigins("http://localhost:4200", "http://127.0.0.1:4200")
-						.allowedHeaders("*")
-						.allowedMethods("*")
-						.exposedHeaders("*")
-						.allowCredentials(true)
-						.allowedOriginPatterns("*");
-			};
-		};
-		
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
