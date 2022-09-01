@@ -58,7 +58,7 @@ public class ProductController {
 	
 	@PutMapping(value = "{id}")
 	public Product update (@PathVariable Long id, @RequestBody Product product) {
-		product.setId(id);
+		product.setProductId(id);
 		return productRepository.save(product);
 	}
 	
