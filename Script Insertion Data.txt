@@ -1,0 +1,6 @@
+INSERT INTO public.product(
+	product_id, activated, category, description, name, price)
+	VALUES (1, true, 'cat1', 'description1', 'Produit1', 60);
+INSERT INTO public.product(
+	product_id, activated, category, description, name, price)
+	VALUES (2, true, 'cat2', 'description2', 'Produit2', 80);

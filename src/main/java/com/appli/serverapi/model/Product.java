@@ -16,14 +16,14 @@ public class Product {
 	@Column(name = "category")
 	private String category;
 	@Column(name = "price")
-	private String price;
+	private int price;
 	@Column(name = "activated")
 	private boolean activated;
 	public Product() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Product(String name, String description, String category, String price, boolean activated) {
+	public Product(String name, String description, String category, int price, boolean activated) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -55,10 +55,10 @@ public class Product {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public boolean isActivated() {

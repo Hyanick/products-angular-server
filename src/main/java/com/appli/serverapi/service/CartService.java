@@ -1,5 +1,9 @@
 package com.appli.serverapi.service;
 
-public interface CartService {
+import java.util.List;
 
+import com.appli.serverapi.model.Cart;
+
+public interface CartService {
+	List<Cart> listCarts();
 }

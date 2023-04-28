@@ -17,21 +17,32 @@ public class Cart {
 	private long productId;
 	@Column(name = "userId", nullable = true)
 	private long userId;
-	@Column(name = "totalPrice", nullable = true)
-	private String totalPrice;
+	@Column(name = "price", nullable = true)
+	private long price;
 	@Column(name = "quantity", nullable = true)
-	private String quantity;
+	private long quantity;
 	
 	public Cart() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cart(long productId, long userId, String totalPrice, String quantity) {
+	public Cart(long productId, long userId, int price, int quantity) {
 		super();
 		this.productId = productId;
 		this.userId = userId;
-		this.totalPrice = totalPrice;
+		this.price = price;
+		this.quantity = quantity;
+	}
+	
+	/*
+	 * 
+	 * Constructeur permettant d'utiliser la requette JPQL
+	 * */
+	public Cart(long productId, long price, long quantity) {
+		super();
+		this.productId = productId;
+		this.price = price;
 		this.quantity = quantity;
 	}
 
@@ -59,26 +70,26 @@ public class Cart {
 		this.userId = userId;
 	}
 
-	public String getTotalPrice() {
-		return totalPrice;
+	public long getprice() {
+		return price;
 	}
 
-	public void setTotalPrice(String totalPrice) {
-		this.totalPrice = totalPrice;
+	public void setprice(long price) {
+		this.price = price;
 	}
 
-	public String getQuantity() {
+	public long getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(String quantity) {
+	public void setQuantity(long quantity) {
 		this.quantity = quantity;
 	}
 
 	@Override
 	public String toString() {
-		return "Cart [cartId=" + cartId + ", productId=" + productId + ", userId=" + userId + ", totalPrice="
-				+ totalPrice + ", quantity=" + quantity + "]";
+		return "Cart [cartId=" + cartId + ", productId=" + productId + ", userId=" + userId + ", price="
+				+ price + ", quantity=" + quantity + "]";
 	}
 
 	
